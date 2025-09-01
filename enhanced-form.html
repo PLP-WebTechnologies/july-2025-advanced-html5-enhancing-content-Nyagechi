@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Power Honey — Order & Registration</title>
+  <meta name="description" content="Power Honey business webpage: structured content, media, schedule, and a complete HTML5 order form." />
+</head>
+<body>
+  <header>
+    <h1>Power Honey</h1>
+    <p id="intro">Welcome to Power Honey — pure, natural, and delicious honey products. This page demonstrates semantic HTML structure, a media gallery, tables, and an order/registration form.</p>
+    <nav aria-label="Page navigation">
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#order">Order Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article id="about">
+      <header>
+        <h2>About Power Honey</h2>
+      </header>
+      <p>
+        Power Honey specializes in producing 100% organic honey harvested from local apiaries. We are committed to quality, sustainability, and customer satisfaction.
+      </p>
+
+      <section aria-labelledby="features-heading">
+        <h3 id="features-heading">Why Choose Power Honey?</h3>
+        <ul>
+          <li>Pure, unprocessed natural honey.</li>
+          <li>Rich in nutrients and antioxidants.</li>
+          <li>Sourced sustainably from local farmers.</li>
+          <li>Available in multiple varieties and packaging sizes.</li>
+        </ul>
+
+        <h4>Our Promise</h4>
+        <ol>
+          <li><strong>Quality:</strong> Every jar of honey is tested for purity.</li>
+          <li><strong>Sustainability:</strong> Supporting local beekeepers and eco-friendly practices.</li>
+          <li><strong>Health:</strong> Honey that is as beneficial as it is sweet.</li>
+        </ol>
+
+        <h4>Key terms</h4>
+        <dl>
+          <dt>Raw Honey</dt>
+          <dd>Unheated, unpasteurized honey retaining natural enzymes and nutrients.</dd>
+          <dt>Organic</dt>
+          <dd>Produced without the use of pesticides or harmful chemicals.</dd>
+        </dl>
+      </section>
+      
+      <aside aria-labelledby="tip-heading">
+        <h3 id="tip-heading">Did you know?</h3>
+        <p>
+          Honey never spoils! Archaeologists have found edible honey in ancient Egyptian tombs.
+        </p>
+      </aside>
+    </article>
+
+    <section id="products" aria-labelledby="products-heading">
+      <h2 id="products-heading">Our Honey Products</h2>
+      <table border="1">
+        <caption>Available Honey Products</caption>
+        <thead>
+          <tr>
+            <th scope="col">Product</th>
+            <th scope="col">Size</th>
+            <th scope="col">Price (KES)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Raw Honey</td>
+            <td>500g</td>
+            <td>600</td>
+          </tr>
+          <tr>
+            <td>Raw Honey</td>
+            <td>1kg</td>
+            <td>1100</td>
+          </tr>
+          <tr>
+            <td>Infused Honey (Ginger)</td>
+            <td>500g</td>
+            <td>700</td>
+          </tr>
+          <tr>
+            <td>Comb Honey</td>
+            <td>250g</td>
+            <td>500</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="2">Total varieties</th>
+            <td>4</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section id="gallery" aria-labelledby="media-heading">
+      <h2 id="media-heading">Gallery</h2>
+
+      <figure>
+        <picture>
+          <img src="https://picsum.photos/960/540?grayscale&honey" width="960" height="540" alt="Fresh honey jars displayed on a wooden table." />
+        </picture>
+        <figcaption>Pure Power Honey ready for delivery.</figcaption>
+      </figure>
+
+      <figure>
+        <svg viewBox="0 0 300 120" width="300" height="120">
+          <title>Honey stock progress</title>
+          <rect x="10" y="20" width="280" height="20" rx="10" fill="#e0e0e0"></rect>
+          <rect x="10" y="20" width="200" height="20" rx="10" fill="#ff9900"></rect>
+          <text x="10" y="70" font-size="12" fill="#3e2723">Stock available: 70%</text>
+        </svg>
+        <figcaption>Live honey stock indicator (70% available).</figcaption>
+      </figure>
+    </section>
+
+    <section id="order" aria-labelledby="order-heading">
+      <h2 id="order-heading">Place Your Order</h2>
+      <p>All fields marked with <span aria-hidden="true">*</span><span class="sr-only">required</span> are required.</p>
+
+      <form action="#" method="post" autocomplete="on" aria-describedby="intro">
+        <fieldset>
+          <legend>Customer Information</legend>
+
+          <div>
+            <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+            <input id="full-name" name="full-name" type="text" placeholder="e.g., John Mwangi" required minlength="2" autocomplete="name" />
+          </div>
+
+          <div>
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+          </div>
+
+          <div>
+            <label for="phone">Phone (KE format) <span aria-hidden="true">*</span></label>
+            <small id="phone-help">Format: +2547XXXXXXXX or 07XXXXXXXX</small>
+            <input id="phone" name="phone" type="tel" placeholder="e.g., +254712345678" required pattern="^(\+254|0)7\d{8}$" aria-describedby="phone-help" autocomplete="tel" />
+          </div>
+
+          <div>
+            <label for="readonly-id">Order ID</label>
+            <input id="readonly-id" name="order-id" type="text" value="PH-2025-001" readonly />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Order Details</legend>
+
+          <div>
+            <label for="product">Select Product <span aria-hidden="true">*</span></label>
+            <select id="product" name="product" required>
+              <option value="" selected disabled>Choose one…</option>
+              <option value="raw-500g">Raw Honey 500g</option>
+              <option value="raw-1kg">Raw Honey 1kg</option>
+              <option value="infused-500g">Infused Honey (Ginger) 500g</option>
+              <option value="comb-250g">Comb Honey 250g</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="quantity">Quantity <span aria-hidden="true">*</span></label>
+            <input id="quantity" name="quantity" type="number" min="1" max="20" required value="1" />
+          </div>
+
+          <div>
+            <label for="delivery">Preferred delivery date</label>
+            <input id="delivery" name="delivery" type="date" min="2025-09-01" />
+          </div>
+
+          <div>
+            <label for="address">Delivery Address <span aria-hidden="true">*</span></label>
+            <textarea id="address" name="address" rows="4" required placeholder="Enter your delivery address"></textarea>
+          </div>
+
+          <div>
+            <label for="payment">Payment Method <span aria-hidden="true">*</span></label>
+            <select id="payment" name="payment" required>
+              <option value="" selected disabled>Select…</option>
+              <option value="mpesa">M-Pesa</option>
+              <option value="bank">Bank Transfer</option>
+              <option value="cash">Cash on Delivery</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="consent">
+              <input id="consent" name="consent" type="checkbox" required />
+              I agree to the Terms &amp; Privacy Policy
+            </label>
+          </div>
+        </fieldset>
+
+        <p>
+          <button type="submit">Submit Order</button>
+          <button type="reset">Reset</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Power Honey. Pure sweetness, naturally harvested.</p>
+  </footer>
+</body>
+</html>
